@@ -1,11 +1,72 @@
 @import '../../sass/index.scss';
 
 .home-container {
+	width: 100%;
 	display: flex;
-	flex-direction: column;
 	align-items: center;
+	flex-direction: column;
 	justify-content: center;
-	gap: 6vw;
-	margin-bottom: 8rem;
-	padding: 0;
+
+	.logo{
+		width: auto;
+	}
+
+	h1 {
+		// position: absolute;
+		// width: 107px;
+		// height: 48px;
+		// left: 32px;
+		// top: 325px;
+
+		font-family: 'sora';
+		font-style: normal;
+		font-weight: 600;
+		font-size: 36px;
+		line-height: 48px;
+
+		color: #000000;
+	}
+	.content {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+		padding: max(5vw, 2rem);
+
+		@media screen and (max-width: 400px) {
+			align-items: flex-start;
+		}
+
+		.title {
+			margin-bottom: 4vw;
+			color: $text;
+			text-align: center;
+			font-size: max(3vw, 1.5rem);
+			font-weight: bold;
+
+			@media screen and (max-width: 400px) {
+				text-align: left;
+			}
+		}
+
+		.description {
+			margin-bottom: 4vw;
+			font-size: max(1.5vw, 0.8rem);
+			color: $text;
+			text-align: center;
+
+			@media screen and (max-width: 400px) {
+				text-align: left;
+			}
+		}
+
+		.input-container {
+			max-width: 40vw;
+
+			@media screen and (max-width: 400px) {
+				max-width: 100%;
+			}
+		}
+	}
 }
