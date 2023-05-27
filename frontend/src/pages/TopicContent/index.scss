@@ -9,18 +9,14 @@
 	align-items: center;
 
 	.topic-name {
-		margin-top: 5vh;
-		font-family: 'sora';
-		font-style: normal;
-		font-weight: 600;
+		margin-top: 2rem;
+		color: $text;
+		text-align: center;
 		font-size: 36px;
-		line-height: 48px;
+		font-weight: bold;
 
-		color: #000000;
-		@media screen and (max-width: 500px) {
-			align-self: center;
-			text-align: center;
-		}
+		color: $text;
+	
 	}
 
 	.topic-content {
