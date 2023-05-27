@@ -16,6 +16,7 @@ def getenv(name):
 class Config:
 	#TOKEN_SECRET = getenv('TOKEN_SECRET')
 
+	OPEN_AI_API_KEY = getenv('OPEN_AI_API_KEY')
 	DB_ENGINE = getenv('DB_ENGINE')
 	#DB_HOST = getenv('DB_HOST')
 	#DB_USERNAME = getenv('DB_USERNAME')
