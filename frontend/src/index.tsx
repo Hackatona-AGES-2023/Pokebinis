@@ -3,11 +3,18 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import reportWebVitals from './reportWebVitals'
 import Router from './router'
+import { queryClient } from './api/query-client'
+import { QueryClientProvider } from 'react-query'
+import { PromptProvider } from './providers/Prompt/PromptProvider'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
 	<React.StrictMode>
-		<Router />
+		<QueryClientProvider client={queryClient}>
+			<PromptProvider>
+				<Router />
+			</PromptProvider>
+		</QueryClientProvider>
 	</React.StrictMode>
 )
 

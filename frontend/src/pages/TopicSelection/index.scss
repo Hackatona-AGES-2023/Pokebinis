@@ -1,44 +1,54 @@
 @import '../../sass/index.scss';
-.root {
-	height: 100%;
-}
-.prompt-container {
+
+.topic-selection-container{
 	width: 100%;
-    max-width: 1200px;
 	display: flex;
-	flex-direction: column;
 	align-items: center;
+	flex-direction: column;
 	justify-content: center;
-	gap: 6vw;
-	padding: 0;
 
-	.header {
+	.content {
 		width: 100%;
-		padding: 1rem;
-		display: flex;
-		align-items: center;
-
-		.header-content {
-			max-width: 1250px;
-			display: flex;
-		}
-	}
-
-	.content{
-		width: 100%;
-   		max-width: 1200px;
+		height: 100%;
 		display: flex;
 		align-items: center;
 		flex-direction: column;
 		justify-content: center;
-		margin-bottom: 4rem;
+		padding: max(5vw, 2rem);
+
+		@media screen and (max-width: 430px) {
+			align-items: flex-start;
+		}
 
 		.title {
-			margin-bottom: 2rem;
-			color: #f36653;
+			margin-bottom: 4vw;
+			color: $text;
 			text-align: center;
-			font-size: 56px;
+			font-size: max(3vw, 1.5rem);
 			font-weight: bold;
+
+			@media screen and (max-width: 430px) {
+				text-align: left;
+			}
+		}
+
+		.description {
+			margin-bottom: 4vw;
+			font-size: max(1.5vw, .8rem);
+			color: $text;
+			text-align: center;
+
+			@media screen and (max-width: 430px) {
+				text-align: left;
+			}
+		}
+
+		.input-container {
+			max-width: max(40vw, 20rem);
+
+			@media screen and (max-width: 430px) {
+				max-width: 100%;
+			}
 		}
 	}
 }

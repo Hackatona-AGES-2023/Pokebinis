@@ -13,7 +13,7 @@
 	> .label {
 		color: $black;
 		position: absolute;
-		font-size: 12px;
+		font-size: max(1vw, .8rem);
 		font-weight: bold;
 		left: 20px;
 		letter-spacing: 0.2px;
@@ -28,7 +28,7 @@
 		color: $black;
 		outline: none;
 		padding: 14px 16px;
-		font-size: 14px;
+		font-size: 16px;
 		background: none;
 		transition: color $animation-timing, border $animation-timing;
 		border: 2px solid $main-blue;
