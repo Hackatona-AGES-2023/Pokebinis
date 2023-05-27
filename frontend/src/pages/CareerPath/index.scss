@@ -19,12 +19,13 @@ hr.solid {
 		.title {
 			color: $text;
 			text-align: center;
-			font-size: max(3vw, 1.5rem);
+			font-size: 36px;
+			text-transform: capitalize;
 			font-weight: bold;
 			margin-bottom: 2rem;
 
 			@media screen and (max-width: 430px) {
-				text-align: left;
+				text-align: center;
 			}
 		}
 
