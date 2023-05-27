@@ -1,21 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './index.scss'
 import Input from '../../components/Input'
 
 const TopicContent: React.FC = () => {
-	return <div className='prompt-container'>
-		<header className="header">
-			<div className="header-content">
-				<h1>teste</h1>
+	const [topicName, setTopicName] = useState('Arquitetura Backend');
+	const [mediaUrl, setMediaUrl] = useState('https://www.youtube.com/watch?v=AmOhy6-mUdY&pp=ygUWMTBoIHRyYXZpcyBzY290dCBib29zdA%3D%3D');
+	const [topicText, setTopicText] = useState('KJASDSJHDFJADJAJHDGSHAGDJAGJDGSHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH');
+
+	return <div className='topic-content-container'>
+		<h1 className="topic-name">{topicName}</h1>
+		<div className="topic-content">
+			<div className="topic-text">
+				<h2>Descrição</h2>
+				<p>{topicText}</p>
 			</div>
-		</header>
-		<div className='content'>
-			<h1 className="title">Qual sua carreira</h1>
-			<Input
-				label="Email de Acesso"
-				required={true}
-				className="input"
-			/>
+			<div className="topic-url">
+				<h2>Video complementar</h2>
+				<a href={mediaUrl}>{mediaUrl}</a>
+			</div>
 		</div>
 	</div>
 }
