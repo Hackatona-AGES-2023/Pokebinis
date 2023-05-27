@@ -1,6 +1,6 @@
 @import '../../sass/index.scss';
 
-.topic-selection-container{
+.topic-selection-container {
 	width: 100%;
 	display: flex;
 	align-items: center;
@@ -16,30 +16,37 @@
 		justify-content: center;
 		padding: max(5vw, 2rem);
 
-		@media screen and (max-width: 430px) {
-			align-items: flex-start;
-		}
-
 		.title {
 			margin-bottom: 4vw;
 			color: $text;
 			text-align: center;
 			font-size: max(3vw, 1.5rem);
 			font-weight: bold;
-
-			@media screen and (max-width: 430px) {
-				text-align: left;
-			}
 		}
 
 		.description {
 			margin-bottom: 4vw;
-			font-size: max(1.5vw, .8rem);
+			font-size: max(1.5vw, 0.8rem);
 			color: $text;
 			text-align: center;
 
-			@media screen and (max-width: 430px) {
+			@media screen and (max-width: 450px) {
 				text-align: left;
+			}
+		}
+
+		.topic-list {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: row;
+			justify-content: center;
+			width: 75%;
+			gap: 1vw;
+
+			@media screen and (max-width: 600px) {
+				justify-content: flex-start;
+				width: 100%;
+				flex-direction: column;
 			}
 		}
 

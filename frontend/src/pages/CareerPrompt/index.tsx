@@ -11,12 +11,13 @@ const Prompt: React.FC = () => {
 	const navigate = useNavigate()
 	const [carrerInput, setCarrerInput] = useState<string>('')
 	const { mutate, isLoading, data } = useCarrerPromptMutation({ carrer: carrerInput })
-	const { setCarrer, setTopics } = usePrompt()
+	const { setCarrer, setTopics, setSelectedTopics } = usePrompt()
 
 	useEffect(() => {
 		if (carrerInput && data) {
 			setCarrer?.(carrerInput)
 			setTopics?.(data.topics)
+			setSelectedTopics?.(data.topics)
 			navigate(PAGES.topicSelection)
 		}
 	}, [data])
