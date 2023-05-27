@@ -11,7 +11,9 @@ def create_app() -> Flask:
 
 	init_extensions(app)
 
-	from app.models import User, Carrer, Topic
+	with app.app_context():
+		from app.apis import init_apis
+		init_apis(app, '/api')
 
 	return app
 	
