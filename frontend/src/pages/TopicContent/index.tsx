@@ -3,6 +3,7 @@ import './index.scss'
 import Input from '../../components/Input'
 import { useParams } from 'react-router-dom'
 import { useTopicContentMutation } from '../../api/core/prompt/mutations'
+import Loader from '../../components/Loader'
 
 const TopicContent: React.FC = () => {
 	const { topic } = useParams()
@@ -24,11 +25,11 @@ const TopicContent: React.FC = () => {
 
 	return (
 		<div className='topic-content-container'>
-			<h1 className='topic-name'>{topicName}</h1>
+			<h1 className='topic-name'>{topic}</h1>
 			{isLoading? (
-				<p className='description'>Loading...</p>
-			) : (
-				<>
+				<Loader/>
+				) : (
+					<>
 					<div className='topic-content'>
 						<div className='topic-text'>
 							<h2>Descrição</h2>
