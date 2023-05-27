@@ -37,8 +37,9 @@ const Prompt: React.FC = () => {
 							value={carrerInput}
 							onChange={(e) => setCarrerInput(e.target.value)}
 						/>
-
-						<Button onClick={mutate}>Confirmar</Button>
+						<div className="confirm-button">
+							<Button onClick={mutate}>Confirmar</Button>
+						</div>
 					</>
 				)}
 			</div>
