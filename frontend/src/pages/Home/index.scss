@@ -8,10 +8,13 @@
 	justify-content: center;
 
 	.logo{
+		// padding-top: 20vh;
 		width: auto;
 	}
 
 	h1 {
+
+		// padding-top: 20vh;
 		// position: absolute;
 		// width: 107px;
 		// height: 48px;
@@ -21,7 +24,7 @@
 		font-family: 'sora';
 		font-style: normal;
 		font-weight: 600;
-		font-size: 36px;
+		font-size: 36px !important;
 		line-height: 48px;
 
 		color: #000000;
