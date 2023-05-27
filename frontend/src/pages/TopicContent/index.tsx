@@ -24,11 +24,11 @@ const TopicContent: React.FC = () => {
 
 	return (
 		<div className='topic-content-container'>
+			<h1 className='topic-name'>{topicName}</h1>
 			{isLoading? (
 				<p className='description'>Loading...</p>
 			) : (
 				<>
-					<h1 className='topic-name'>{topicName}</h1>
 					<div className='topic-content'>
 						<div className='topic-text'>
 							<h2>Descrição</h2>
