@@ -1,0 +1,11 @@
+@import '../../sass/index.scss';
+
+.home-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 6vw;
+	margin-bottom: 8rem;
+	padding: 0;
+}
