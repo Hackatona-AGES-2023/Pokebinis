@@ -17,3 +17,10 @@ class PromptDto:
 			'topics': fields.List(fields.String())
 		}
 	)
+
+	topics_list_schema =  api.model(
+		'topics_list_schema',
+		{
+			'topics': fields.List(fields.String())
+		}
+	)
