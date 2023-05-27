@@ -46,7 +46,7 @@ export const routes: RouteConfig[] = [
 	},
 	{
 		component: <TopicContent />,
-		path: PAGES.topicContent,
+		path: PAGES.topicContent(),
 		requireAuth: false,
 		headerEnabled: true
 	}

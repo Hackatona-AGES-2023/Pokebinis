@@ -8,11 +8,11 @@ import IMAGES from '../../utils/constants/images'
 const CareerPath: React.FC = () => {
 
 	const navigate = useNavigate()
-	const { carrer, selectedTopics, setSelectedTopics } = usePrompt()
+	const { carrer, selectedTopics } = usePrompt()
 
-	useEffect(() => {
-		if (!carrer) navigate(PAGES.careerPrompt)
-	}, [carrer])
+	const onTopicClick = (topic:string) => {
+		navigate(PAGES.topicContent(topic))
+	}
 
 	return <div className='career-path-container'>
 		<div className='content'>
@@ -23,7 +23,7 @@ const CareerPath: React.FC = () => {
 				selectedTopics.map((topic, index) => (
 					<div key={index}>
 						<div className='list-item'
-							onClick={() => {null}}>
+							onClick={() => onTopicClick(topic)}>
 							<p className='description'>
 								{topic}
 							</p>

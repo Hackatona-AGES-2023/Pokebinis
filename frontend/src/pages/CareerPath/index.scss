@@ -1,7 +1,4 @@
 @import '../../sass/index.scss';
-.root {
-	height: 100%;
-}
 hr.solid {
 	border-top: 1px solid #000;
 }
@@ -24,6 +21,7 @@ hr.solid {
 			text-align: center;
 			font-size: max(3vw, 1.5rem);
 			font-weight: bold;
+			margin-bottom: 2rem;
 
 			@media screen and (max-width: 430px) {
 				text-align: left;
@@ -35,11 +33,15 @@ hr.solid {
 			align-items: center;
 			justify-content: space-between;
 			padding: 2vh 2vw;
+			
+
+			.image {
+				height: 2vh;
+			}
 
 			.description {
 				color: $text;
-				text-align: left;
-				font-size: max(1.5vw, 0.8rem);
+				font-size: 16px;
 			}
 		}
 	}
