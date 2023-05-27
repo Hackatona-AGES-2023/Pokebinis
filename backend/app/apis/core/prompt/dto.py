@@ -10,3 +10,10 @@ class PromptDto:
 			'carrer': fields.String()
 		}
 	)
+
+	carrer_prompt_response_schema =  api.model(
+		'carrer_prompt_response_schema',
+		{
+			'topics': fields.List(fields.String())
+		}
+	)

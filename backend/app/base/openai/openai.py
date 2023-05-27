@@ -14,12 +14,12 @@ class OpenAI:
 		self._api_key = app.config.get('OPEN_AI_API_KEY')
 		openai.api_key = self._api_key
 
-	def prompt(self, prompt: str):
+	def get_topics(self, prompt: str):
 		response = openai.Completion.create(
 			model="text-davinci-003",
-			prompt=prompt,
+			prompt="Me de 5 topicos que eu precio ter conhecimento avançado para desenvolver minha carreira na area: {}. De os topicos em formato JSON, com uma chave 'topics' contendo uma lista com os 5 topicos".format(prompt),
 			temperature=0,
 			max_tokens=100
 		)
-		return response
+		return response.get("choices")[0].get('text').strip()
 		
