@@ -1,0 +1,46 @@
+@import '../../sass/index.scss';
+.root {
+	height: 100%;
+}
+hr.solid {
+	border-top: 1px solid #000;
+}
+
+.career-path-container {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+
+	.content {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		padding: max(5vw, 2rem);
+
+		.title {
+			color: $text;
+			text-align: center;
+			font-size: max(3vw, 1.5rem);
+			font-weight: bold;
+
+			@media screen and (max-width: 430px) {
+				text-align: left;
+			}
+		}
+
+		.list-item {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 2vh 2vw;
+
+			.description {
+				color: $text;
+				text-align: left;
+				font-size: max(1.5vw, 0.8rem);
+			}
+		}
+	}
+}

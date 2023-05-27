@@ -8,15 +8,19 @@ body,
 	display: flex;
 	flex-direction: column;
 	min-height: 100%;
-	background-color: $bg-color;
+	background-color: white;
 	color: $white;
+}
+
+body {
+	height: 100vh;
 }
 
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: 'Sora','Poppins', sans-serif !important;
+	font-family: 'Sora', 'Poppins', sans-serif !important;
 	scrollbar-width: auto;
 	scrollbar-color: #292929 #000000;
 }

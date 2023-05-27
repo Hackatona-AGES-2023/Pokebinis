@@ -1,0 +1,113 @@
+@import '../../sass/index.scss';
+@import 'src/sass/_variables.scss';
+
+.input-container {
+	width: 100%;
+	display: inline-flex;
+	position: relative;
+	flex-direction: column;
+	justify-content: center;
+	vertical-align: bottom;
+	border-radius: 12px;
+
+	> .label {
+		color: $black;
+		position: absolute;
+		font-size: max(1vw, .8rem);
+		font-weight: bold;
+		left: 20px;
+		letter-spacing: 0.2px;
+		pointer-events: none;
+
+		// Disable selection highlight
+		-webkit-touch-callout: none;
+		user-select: none;
+		font-size: 16px;
+	}
+
+	> .input {
+		color: $black;
+		outline: none;
+		padding: 14px 16px;
+		font-size: 16px;
+		background: none;
+		transition: color $animation-timing, border $animation-timing;
+		border: 2px solid $main-blue;
+		border-radius: 5px;
+
+		&:focus {
+			border-color: $main-blue;
+		}
+
+		&:focus,
+		&.filled {
+			padding: 20px 16px 8px;
+
+			~ .label {
+				transform: translate(-15%, -80%);
+				transition: transform 100ms ease-in-out;
+				font-size: 10px;
+			}
+		}
+
+		&.search > .input {
+			&::-ms-clear,
+			&::-ms-reveal {
+				width: 0;
+				height: 0;
+				display: none;
+			}
+
+			&::-webkit-search-decoration,
+			&::-webkit-search-cancel-button,
+			&::-webkit-search-results-button,
+			&::-webkit-search-results-decoration {
+				display: none;
+			}
+		}
+
+		&.number > .input {
+			appearance: textfield;
+
+			&::-webkit-inner-spin-button,
+			&::-webkit-outer-spin-button {
+				display: none;
+			}
+		}
+
+		&.date > .input {
+			appearance: none;
+			line-height: 22px;
+
+			&::-webkit-clear-button,
+			&::-webkit-inner-spin-button,
+			&::-webkit-calendar-picker-indicator {
+				display: none;
+			}
+
+			&::-webkit-datetime-edit-day-field,
+			&::-webkit-datetime-edit-year-field,
+			&::-webkit-datetime-edit-month-field {
+				padding: 0;
+			}
+
+			&:not(:focus, .filled)::-webkit-datetime-edit {
+				opacity: 0;
+			}
+		}
+
+		&.readonly,
+		&.disabled {
+			> .input,
+			> .input:focus,
+			> .label {
+				color: $grey-blue;
+				border-color: transparent;
+				opacity: 1;
+				background: none;
+				touch-action: none;
+				pointer-events: none;
+			}
+		}
+	}
+}

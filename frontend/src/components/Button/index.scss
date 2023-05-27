@@ -1,0 +1,65 @@
+@use 'sass:color';
+@import '../../sass/index.scss';
+@import '../../sass/variables';
+
+.button-container {
+	display: block;
+	padding: max(.6rem, 1vw) max(1.1rem, 1.5vw);
+	border-radius: 4px;
+	font-size: max(.8rem, 1vw);
+	font-weight: bold;
+	cursor: pointer;
+	background-size: 100% 100%;
+	// animation: popup 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+	transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+	box-shadow: $box-shadow;
+	color: $white;
+
+	&.primary {
+		background-color: $main-blue;
+		border: none;
+		width: 25vw;
+
+		@media screen and (max-width: 500px) {
+			width: 100%;
+		}
+
+		&:hover {
+			background-color: color.adjust($color: $main-blue, $saturation: 10%);
+		}
+		&:disabled {
+			background-color: color.adjust($color: $main-blue, $saturation: -50%);
+			color: $grey-blue;
+		}
+	}
+
+	&.secondary {
+		background-color: $grey-blue;
+		border: none;
+		width: 25vw;
+
+		@media screen and (max-width: 500px) {
+			width: 100%;
+		}
+
+		&:hover {
+			background-color: color.adjust($color: $light-blue, $saturation: 10%);
+		}
+		&:disabled {
+			background-color: color.adjust($color: $light-blue, $saturation: -50%);
+			color: $grey-blue;
+		}
+	}
+
+	&:active {
+		transform: scale(0.9);
+	}
+
+	&:disabled {
+		cursor: auto;
+
+		&:active {
+			transform: none;
+		}
+	}
+}

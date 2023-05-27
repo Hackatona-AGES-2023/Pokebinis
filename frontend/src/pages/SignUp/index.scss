@@ -1,20 +1,21 @@
 @import '../../sass/index.scss';
 @import '../../sass/_variables.scss';
 
-.home-container {
+
+.signUp-container {
 	width: 100%;
 	display: flex;
 	align-items: center;
 	flex-direction: column;
 	justify-content: center;
-	margin-bottom: 5vh;
+    margin-bottom: 5vh;
 
-	img {
-		margin-top: 15vh;
-	}
+    img{
+        margin-top: 15vh;
+    }
 
 	h1 {
-		margin-top: 10vh;
+        margin-top: 10vh;
 
 		font-family: 'sora';
 		font-style: normal;
@@ -22,7 +23,7 @@
 		font-size: 36px !important;
 		line-height: 48px;
 
-		color: $text;
+		color: #000000;
 	}
 	.content {
 		width: 100%;
@@ -32,11 +33,11 @@
 		justify-content: center;
 		padding: max(5vw, 2rem);
 
-		gap: 2vh;
+        gap: 2vh;
 
-		img {
-			align-self: center;
-		}
+        img{
+            align-self: center;
+        }
 
 		@media screen and (max-width: 500px) {
 			align-items: flex-start;
@@ -54,19 +55,17 @@
 			}
 		}
 
-		Button {
-			gap: 2vh;
-
-			align-self: center;
-			font-size: 1.2rem;
-		}
+        Button{
+            margin-top: 15vh;
+            align-self: center;
+	        font-size: 1.2rem;
+        }
 
 		.input-container {
 			max-width: 40vw;
 
-			margin-bottom: 10vh;
 			@media screen and (max-width: 500px) {
-				max-width: 100% !important;
+				max-width: 100%;
 			}
 		}
 	}

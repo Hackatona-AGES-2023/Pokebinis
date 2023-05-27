@@ -1,0 +1,12 @@
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    padding-bottom: 2rem;
+    
+    .logo-svg {
+        width: max(15vw, 10rem);
+        margin-top: 1rem;
+        margin-left: 1rem;
+    }
+}
