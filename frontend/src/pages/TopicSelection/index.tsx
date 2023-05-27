@@ -1,18 +1,18 @@
 import React from 'react'
 import './index.scss'
-import Input from '../../components/Input'
+import { usePrompt } from '../../providers/Prompt/PromptProvider'
 
 const TopicSelection: React.FC = () => {
-	return <div className='prompt-container'>
-		<div className='content'>
-			<h1 className="title">Qual sua carreira</h1>
-			<Input
-				label="Email de Acesso"
-				required={true}
-				className="input"
-			/>
+	const { carrer, topics } = usePrompt()
+
+	return (
+		<div className='prompt-container'>
+			<div className='content'>
+				<h1 className='title'>{carrer}</h1>
+				
+			</div>
 		</div>
-	</div>
+	)
 }
 
 export default TopicSelection

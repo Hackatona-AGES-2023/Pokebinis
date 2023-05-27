@@ -3,13 +3,22 @@ import './index.scss'
 import Input from '../../components/Input'
 import { useCarrerPromptMutation } from '../../api/core/prompt/mutations'
 import Button from '../../components/Button'
+import { usePrompt } from '../../providers/Prompt/PromptProvider'
+import { useNavigate } from 'react-router'
+import PAGES from '../../utils/constants/pages'
 
 const Prompt: React.FC = () => {
-	const [carrer, setCarrer] = useState<string>('')
-	const { mutate, isLoading, data } = useCarrerPromptMutation({ carrer })
+	const navigate = useNavigate()
+	const [carrerInput, setCarrerInput] = useState<string>('')
+	const { mutate, isLoading, data } = useCarrerPromptMutation({ carrer: carrerInput })
+	const { setCarrer, setTopics } = usePrompt()
 
 	useEffect(() => {
-		console.log(data)
+		if (carrerInput && data) {
+			setCarrer?.(carrerInput)
+			setTopics?.(data.topics)
+			navigate(PAGES.topicSelection)
+		}
 	}, [data])
 
 	return (
@@ -25,8 +34,8 @@ const Prompt: React.FC = () => {
 							label='Profissão'
 							required={false}
 							className='input'
-							value={carrer}
-							onChange={(e) => setCarrer(e.target.value)}
+							value={carrerInput}
+							onChange={(e) => setCarrerInput(e.target.value)}
 						/>
 
 						<Button onClick={mutate}>Confirmar</Button>
