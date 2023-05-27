@@ -4,6 +4,7 @@ import { usePrompt } from '../../providers/Prompt/PromptProvider'
 import { useNavigate } from 'react-router'
 import PAGES from '../../utils/constants/pages'
 import CheckBox from '../../components/CheckBox'
+import Button from '../../components/Button'
 
 const TopicSelection: React.FC = () => {
 	const navigate = useNavigate()
@@ -20,6 +21,10 @@ const TopicSelection: React.FC = () => {
 			old = old.filter((s) => s !== e.target.value)
 			setSelectedTopics?.(old)
 		}
+	}
+
+	const onButtonClick = () => {
+		navigate(PAGES.careerPath)
 	}
 
 	return (
@@ -40,6 +45,11 @@ const TopicSelection: React.FC = () => {
 							</div>
 						))}
 				</div>
+				<Button 
+					type='primary'
+					onClick={onButtonClick}>
+						Confirmar
+				</Button>
 			</div>
 		</div>
 	)
