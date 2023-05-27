@@ -12,7 +12,7 @@
 	> .label {
 		color: $black;
 		position: absolute;
-		font-size: 12px;
+		font-size: max(1vw, .8rem);
 		font-weight: bold;
 		left: 20px;
 		letter-spacing: 0.2px;

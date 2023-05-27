@@ -12,17 +12,17 @@
 	// animation: popup 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 	transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 	box-shadow: $box-shadow;
+	color: $white;
 
 	&.primary {
-		background-color: $blue;
-		color: rgba($white, 0.7);
+		background-color: $main-blue;
 		border: none;
 
 		&:hover {
-			background-color: color.adjust($color: $green, $saturation: 10%);
+			background-color: color.adjust($color: $main-blue, $saturation: 10%);
 		}
 		&:disabled {
-			background-color: color.adjust($color: $green, $saturation: -50%);
+			background-color: color.adjust($color: $main-blue, $saturation: -50%);
 			color: $grey-blue;
 		}
 	}
@@ -30,13 +30,12 @@
 	&.secondary {
 		background-color: $light-blue;
 		border: none;
-		color: rgba($white, 0.7);
 
 		&:hover {
-			background-color: color.adjust($color: $blue, $saturation: 10%);
+			background-color: color.adjust($color: $light-blue, $saturation: 10%);
 		}
 		&:disabled {
-			background-color: color.adjust($color: $blue, $saturation: -50%);
+			background-color: color.adjust($color: $light-blue, $saturation: -50%);
 			color: $grey-blue;
 		}
 	}
