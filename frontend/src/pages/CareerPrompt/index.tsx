@@ -6,6 +6,7 @@ import Button from '../../components/Button'
 import { usePrompt } from '../../providers/Prompt/PromptProvider'
 import { useNavigate } from 'react-router'
 import PAGES from '../../utils/constants/pages'
+import Loader from '../../components/Loader'
 
 const Prompt: React.FC = () => {
 	const navigate = useNavigate()
@@ -27,10 +28,12 @@ const Prompt: React.FC = () => {
 			<div className='content'>
 				<h1 className='title'>Inicie aqui sua trilha</h1>
 				{isLoading ? (
-					<p className='description'>Loading...</p>
+					<Loader />
 				) : (
 					<>
-						<p className='description'>Digite a área de atuação desejada para que a sua trilha seja criada</p>
+						<p className='description'>
+							Digite a área de atuação desejada para que a sua trilha seja criada
+						</p>
 						<Input
 							label='Profissão'
 							required={false}
@@ -38,7 +41,7 @@ const Prompt: React.FC = () => {
 							value={carrerInput}
 							onChange={(e) => setCarrerInput(e.target.value)}
 						/>
-						<div className="confirm-button">
+						<div className='confirm-button'>
 							<Button onClick={mutate}>Confirmar</Button>
 						</div>
 					</>
