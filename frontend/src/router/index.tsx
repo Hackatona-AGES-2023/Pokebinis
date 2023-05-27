@@ -7,9 +7,9 @@ import Header from '../components/Header'
 const Router: React.FC = () => {
 	return (
 		<BrowserRouter>
-			<Header/>
 			<Routes>
 				{routes.map((route, index) => {
+					
 					const element = route.requireAuth ? (
 						<ProtectedRoute {...route}>{route.component}</ProtectedRoute>
 					) : (
@@ -21,6 +21,9 @@ const Router: React.FC = () => {
 							path={route.path}
 							element={
 								<>
+								{
+									route.headerEnabled && <Header/>
+								}
 									{element}
 								</>
 							}

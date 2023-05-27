@@ -9,7 +9,7 @@ import SignUp from '../pages/SignUp'
 
 export interface RouteConfig extends Omit<RouteProps, 'component'> {
 	requireAuth?: boolean
-	footerEnabled?: boolean
+	headerEnabled?: boolean
 	component: JSX.Element
 }
 
@@ -18,36 +18,36 @@ export const routes: RouteConfig[] = [
 		component: <Home />,
 		path: PAGES.home,
 		requireAuth: false,
-		footerEnabled: true
+		headerEnabled: false
 	},
 	{
 		component: <SignUp />,
 		path: PAGES.signUp,
 		requireAuth: false,
-		footerEnabled: true
+		headerEnabled: true
 	},
 	{
 		component: <CareerPrompt />,
 		path: PAGES.careerPrompt,
 		requireAuth: false,
-		footerEnabled: true
+		headerEnabled: true
 	},
 	{
 		component: <TopicSelection />,
 		path: PAGES.topicSelection,
 		requireAuth: false,
-		footerEnabled: true
+		headerEnabled: true
 	},
 	{
 		component: <CareerPath />,
 		path: PAGES.careerPath,
 		requireAuth: false,
-		footerEnabled: true
+		headerEnabled: true
 	},
 	{
 		component: <TopicContent />,
 		path: PAGES.topicContent,
 		requireAuth: false,
-		footerEnabled: true
+		headerEnabled: true
 	}
 ]
