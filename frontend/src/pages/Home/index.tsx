@@ -1,6 +1,7 @@
 import React from 'react'
 import Input from '../../components/Input'
 import './index.scss'
+import Button from '../../components/Button'
 import IMAGES from '../../utils/constants/images'
 
 const Home: React.FC = () => {
@@ -10,8 +11,8 @@ const Home: React.FC = () => {
 				<img src={IMAGES.logoWithTitle} />
 				<h1 className='title'>Entrar</h1>
 				<Input label='E-mail' required={false} className='input' />
-				<button>login</button>
-				<button>cadastrar</button>
+				<Button>Entrar</Button>
+				<Button type='secondary' >Cadastre-se</Button>
 			</div>
 		</div>
 	)

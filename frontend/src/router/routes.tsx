@@ -24,7 +24,7 @@ export const routes: RouteConfig[] = [
 		component: <SignUp />,
 		path: PAGES.signUp,
 		requireAuth: false,
-		headerEnabled: true
+		headerEnabled: false
 	},
 	{
 		component: <CareerPrompt />,

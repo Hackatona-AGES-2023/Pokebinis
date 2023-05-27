@@ -1,5 +1,6 @@
 @use 'sass:color';
 @import '../../sass/index.scss';
+@import '../../sass/variables';
 
 .button-container {
 	display: block;
@@ -33,7 +34,7 @@
 	}
 
 	&.secondary {
-		background-color: $light-blue;
+		background-color: $grey-blue;
 		border: none;
 		width: 20vw;
 
