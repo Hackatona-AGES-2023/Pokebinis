@@ -8,6 +8,20 @@
 	justify-content: center;
 	align-items: center;
 
+	.description {
+		margin-bottom: 1vw;
+		font-size: max(1.5vw, .8rem);
+		color: $text;
+		text-align: center;
+		font-size: 16px;
+		line-height: 24px;
+
+		@media screen and (max-width: 500px) {
+			text-align: left;
+			align-self: flex-start;
+		}
+	}
+
 	.topic-name {
 		color: $text;
 		font-size: 56px;

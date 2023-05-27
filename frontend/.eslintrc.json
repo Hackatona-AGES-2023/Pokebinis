@@ -23,7 +23,7 @@
         "prettier"
     ],
     "rules": {
-        "camelcase": "error",
+        "camelcase": "warn",
         "react/react-in-jsx-scope": "off",
         "no-duplicate-imports": "error",
         "quotes": ["error", "single"]
