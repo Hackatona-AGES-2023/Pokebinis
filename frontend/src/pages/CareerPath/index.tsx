@@ -3,6 +3,7 @@ import './index.scss'
 import { usePrompt } from '../../providers/Prompt/PromptProvider'
 import { useNavigate } from 'react-router'
 import PAGES from '../../utils/constants/pages'
+import IMAGES from '../../utils/constants/images'
 
 const CareerPath: React.FC = () => {
 
@@ -26,7 +27,9 @@ const CareerPath: React.FC = () => {
 							<p className='description'>
 								{topic}
 							</p>
-							{/* Icone */}
+							<img 
+								src={IMAGES.rightArrow}
+								className='image' />
 						</div>
 						<hr className="solid" />
 					</div>
