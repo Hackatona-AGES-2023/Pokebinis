@@ -1,10 +1,18 @@
-import React, { InputHTMLAttributes } from 'react'
+import React, { DetailedHTMLProps, InputHTMLAttributes } from 'react'
 import './index.scss'
 
-export type CheckBoxProps = InputHTMLAttributes<HTMLInputElement>
+export interface CheckBoxProps 
+	extends DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> {
+		label: string
+	}
 
 const CheckBox: React.FC<CheckBoxProps> = (props) => {
-	return <input {...props} className='checkbox-container' type='checkbox'></input>
+	return <div className='wrapper'>
+		<input {...props} className='checkbox-container' type='checkbox'></input>
+		<p className='label'>{props.label}</p>
+	</div>
+		
+
 }
 
 export default CheckBox
