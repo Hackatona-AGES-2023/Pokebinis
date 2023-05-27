@@ -13,35 +13,37 @@ const TopicContent: React.FC = () => {
 	const [topicText, setTopicText] = useState('')
 
 	useEffect(() => {
-		if (!data) return 
+		if (!data) return
 		setTopicName(data.name)
 		setMediaUrl(data.content.mediaUrl)
 		setTopicText(data.content.text)
-	},[data])
+	}, [data])
 
 	useEffect(() => {
 		if (topic) mutate()
-	},[topic])
+	}, [topic])
 
 	return (
 		<div className='topic-content-container'>
-			<h1 className='topic-name'>{topic}</h1>
-			{isLoading? (
-				<Loader/>
+			<div className='content'>
+				<h1 className='topic-name'>{topic}</h1>
+				{isLoading ? (
+					<Loader />
 				) : (
 					<>
-					<div className='topic-content'>
-						<div className='topic-text'>
-							<h2>Descrição</h2>
-							<p>{topicText}</p>
+						<div className='topic-content'>
+							<div className='topic-text'>
+								<h2>Descrição</h2>
+								<p>{topicText}</p>
+							</div>
+							<div className='topic-url'>
+								<h2>Video complementar</h2>
+								<a href={mediaUrl}>{mediaUrl}</a>
+							</div>
 						</div>
-						<div className='topic-url'>
-							<h2>Video complementar</h2>
-							<a href={mediaUrl}>{mediaUrl}</a>
-						</div>
-					</div>
-				</>
-			)}
+					</>
+				)}
+			</div>
 		</div>
 	)
 }
