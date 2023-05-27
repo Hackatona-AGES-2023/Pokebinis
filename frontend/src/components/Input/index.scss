@@ -8,10 +8,9 @@
 	justify-content: center;
 	vertical-align: bottom;
 	border-radius: 12px;
-	box-shadow: $box-shadow;
 
 	> .label {
-		color: $white;
+		color: $black;
 		position: absolute;
 		font-size: 12px;
 		font-weight: bold;
@@ -25,13 +24,13 @@
 	}
 
 	> .input {
-		color: $white;
+		color: $black;
 		outline: none;
 		padding: 14px 16px;
 		font-size: 14px;
 		background: none;
 		transition: color $animation-timing, border $animation-timing;
-		border: 1px solid $white;
+		border: 1px solid $black;
 		border-radius: 12px;
 
 		&:focus {
