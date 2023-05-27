@@ -14,7 +14,7 @@
 	box-shadow: $box-shadow;
 
 	&.primary {
-		background-color: $green;
+		background-color: $blue;
 		color: rgba($white, 0.7);
 		border: none;
 
@@ -23,12 +23,12 @@
 		}
 		&:disabled {
 			background-color: color.adjust($color: $green, $saturation: -50%);
-			color: $grey;
+			color: $grey-blue;
 		}
 	}
 
 	&.secondary {
-		background-color: $blue;
+		background-color: $light-blue;
 		border: none;
 		color: rgba($white, 0.7);
 
@@ -37,35 +37,7 @@
 		}
 		&:disabled {
 			background-color: color.adjust($color: $blue, $saturation: -50%);
-			color: $grey;
-		}
-	}
-
-	&.tertiary {
-		background-color: $yellow;
-		border: none;
-		color: rgba($black, 0.7);
-
-		&:hover {
-			background-color: color.adjust($color: $yellow, $saturation: 10%);
-		}
-		&:disabled {
-			background-color: color.adjust($color: $yellow, $saturation: -50%);
-			color: $grey;
-		}
-	}
-
-	&.danger {
-		background-color: $red;
-		border: none;
-		color: rgba($white, 0.7);
-
-		&:hover {
-			background-color: color.adjust($color: $red, $saturation: 10%);
-		}
-		&:disabled {
-			background-color: color.adjust($color: $red, $saturation: -50%);
-			color: $grey;
+			color: $grey-blue;
 		}
 	}
 

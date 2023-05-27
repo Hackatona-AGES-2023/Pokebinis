@@ -1,6 +1,6 @@
 const PAGES = {
 	home: '/',
-	careerPrompt: '/career-prompt',
+	careerPrompt: '/escolha-a-sua-carreira',
 	careerPath: '/career-path',
 	topicContent: '/topic-content',
 	topicSelection: '/topic-selection'
