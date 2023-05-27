@@ -39,7 +39,7 @@
             align-self: center;
         }
 
-		@media screen and (max-width: 400px) {
+		@media screen and (max-width: 500px) {
 			align-items: flex-start;
 		}
 
@@ -50,18 +50,7 @@
 			font-size: max(3vw, 1.5rem);
 			font-weight: bold;
 
-			@media screen and (max-width: 400px) {
-				text-align: left;
-			}
-		}
-
-		.description {
-			margin-bottom: 4vw;
-			font-size: max(1.5vw, 0.8rem);
-			color: $text;
-			text-align: center;
-
-			@media screen and (max-width: 400px) {
+			@media screen and (max-width: 500px) {
 				text-align: left;
 			}
 		}
@@ -75,7 +64,7 @@
 		.input-container {
 			max-width: 40vw;
 
-			@media screen and (max-width: 400px) {
+			@media screen and (max-width: 500px) {
 				max-width: 100%;
 			}
 		}

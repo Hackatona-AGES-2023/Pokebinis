@@ -1,10 +1,9 @@
 @import '../../sass/index.scss';
 .root {
 	height: 100%;
-	
 }
 hr.solid {
-	border-top: 2px solid #000;
+	border-top: 1px solid #000;
 }
 
 .career-path-container {
@@ -20,32 +19,28 @@ hr.solid {
 		width: 100%;
 		padding: max(5vw, 2rem);
 
-		@media screen and (max-width: 430px) {
-			align-items: flex-start;
-		}
-
 		.title {
 			color: $text;
 			text-align: center;
 			font-size: max(3vw, 1.5rem);
 			font-weight: bold;
-			
+
 			@media screen and (max-width: 430px) {
 				text-align: left;
 			}
 		}
-		
-		.list-item{
+
+		.list-item {
 			display: flex;
 			align-items: center;
-			padding: 2vw 2vh;
+			justify-content: space-between;
+			padding: 2vh 2vw;
 
 			.description {
 				color: $text;
 				text-align: left;
-				font-size: max(1.5vw, .8rem);
+				font-size: max(1.5vw, 0.8rem);
 			}
 		}
-
 	}
 }

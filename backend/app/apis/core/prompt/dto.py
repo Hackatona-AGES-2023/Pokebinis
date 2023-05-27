@@ -18,29 +18,24 @@ class PromptDto:
 		}
 	)
 
-	topics_list_schema =  api.model(
-		'topics_list_schema',
+	topic_list_schema =  api.model(
+		'topic_list_schema',
 		{
-			'topics': fields.List(fields.String())
+			'topic': fields.String()
 		}
 	)
 
-	topics_contents_schema =  api.model(
-		'topics_contents_schema',
+	topic_content_schema =  api.model(
+		'topic_content_schema',
 		{
-			'data': fields.List(
-				fields.Nested(api.model(
-				'topic_content', 
+			'name': fields.String(),
+			'content': fields.Nested(api.model(
+				'content_data',
 				{
-					'name': fields.String(),
-					'content': fields.Nested(api.model(
-						'content_data',
-						{
-							'media_url': fields.String(),
-							'text': fields.String()
-						}
-					))
+					'media_url': fields.String(),
+					'text': fields.String()
 				}
-			)))
+			)
+		)
 		}
 	)
