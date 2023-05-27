@@ -1,0 +1,83 @@
+@use 'sass:color';
+@import '../../sass/index.scss';
+
+.button-container {
+	display: block;
+	padding: max(.6rem, 1vw) max(1.1rem, 1.5vw);
+	border-radius: 4px;
+	font-size: max(.8rem, 1vw);
+	font-weight: bold;
+	cursor: pointer;
+	background-size: 100% 100%;
+	// animation: popup 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+	transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+	box-shadow: $box-shadow;
+
+	&.primary {
+		background-color: $green;
+		color: rgba($white, 0.7);
+		border: none;
+
+		&:hover {
+			background-color: color.adjust($color: $green, $saturation: 10%);
+		}
+		&:disabled {
+			background-color: color.adjust($color: $green, $saturation: -50%);
+			color: $grey;
+		}
+	}
+
+	&.secondary {
+		background-color: $blue;
+		border: none;
+		color: rgba($white, 0.7);
+
+		&:hover {
+			background-color: color.adjust($color: $blue, $saturation: 10%);
+		}
+		&:disabled {
+			background-color: color.adjust($color: $blue, $saturation: -50%);
+			color: $grey;
+		}
+	}
+
+	&.tertiary {
+		background-color: $yellow;
+		border: none;
+		color: rgba($black, 0.7);
+
+		&:hover {
+			background-color: color.adjust($color: $yellow, $saturation: 10%);
+		}
+		&:disabled {
+			background-color: color.adjust($color: $yellow, $saturation: -50%);
+			color: $grey;
+		}
+	}
+
+	&.danger {
+		background-color: $red;
+		border: none;
+		color: rgba($white, 0.7);
+
+		&:hover {
+			background-color: color.adjust($color: $red, $saturation: 10%);
+		}
+		&:disabled {
+			background-color: color.adjust($color: $red, $saturation: -50%);
+			color: $grey;
+		}
+	}
+
+	&:active {
+		transform: scale(0.9);
+	}
+
+	&:disabled {
+		cursor: auto;
+
+		&:active {
+			transform: none;
+		}
+	}
+}
