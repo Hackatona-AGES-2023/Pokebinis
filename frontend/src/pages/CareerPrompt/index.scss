@@ -21,7 +21,6 @@
 
 		.title {
 			margin-top: 5vh;
-
 			font-family: 'sora';
 			font-style: normal;
 			font-weight: 600;
@@ -37,7 +36,7 @@
 
 		.description {
 			margin-bottom: 1vw;
-			font-size: max(1.5vw, .8rem);
+			font-size: 16px;
 			color: $text;
 			text-align: center;
 			font-size: 16px;
@@ -63,7 +62,7 @@
 			max-width: max(40vw, 20rem);
 			margin-top: 35vh;
 			Button{
-				font-size: 1.5rem;
+				font-size: 1rem;
 				@media screen and (min-width: 500px) {
 					min-width: 20rem;
 				}

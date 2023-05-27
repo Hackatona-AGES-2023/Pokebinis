@@ -55,17 +55,6 @@
 			}
 		}
 
-		.description {
-			margin-bottom: 4vw;
-			font-size: max(1.5vw, 0.8rem);
-			color: $text;
-			text-align: center;
-
-			@media screen and (max-width: 500px) {
-				text-align: left;
-			}
-		}
-
         Button{
             margin-top: 15vh;
             align-self: center;
