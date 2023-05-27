@@ -5,6 +5,7 @@ import CareerPath from '../pages/CareerPath'
 import TopicSelection from '../pages/TopicSelection'
 import TopicContent from '../pages/TopicContent'
 import CareerPrompt from '../pages/CareerPrompt'
+import SignUp from '../pages/SignUp'
 
 export interface RouteConfig extends Omit<RouteProps, 'component'> {
 	requireAuth?: boolean
@@ -16,6 +17,12 @@ export const routes: RouteConfig[] = [
 	{
 		component: <Home />,
 		path: PAGES.home,
+		requireAuth: false,
+		footerEnabled: true
+	},
+	{
+		component: <SignUp />,
+		path: PAGES.signUp,
 		requireAuth: false,
 		footerEnabled: true
 	},
