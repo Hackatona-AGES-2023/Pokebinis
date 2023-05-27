@@ -1,0 +1,42 @@
+@import '../../sass/index.scss';
+
+.prompt-container {
+	width: 100%;
+    max-width: 1200px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 6vw;
+	margin-bottom: 8rem;
+	padding: 0;
+
+	.header {
+		width: 100%;
+		padding: 2rem;
+		display: flex;
+		align-items: center;
+
+		.header-content {
+			max-width: 1250px;
+			display: flex;
+		}
+	}
+
+	.content{
+		width: 100%;
+   		max-width: 1200px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 4rem;
+
+		.title {
+			margin-bottom: 2rem;
+			color: #f36653;
+			text-align: center;
+			font-size: 56px;
+			font-weight: bold;
+		}
+	}
+}

@@ -1,5 +1,6 @@
 const PAGES = {
-	home: '/'
+	home: '/',
+	prompt: '/user_prompt'
 }
 
 export default PAGES
