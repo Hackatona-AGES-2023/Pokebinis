@@ -30,7 +30,7 @@ const Prompt: React.FC = () => {
 					<p className='description'>Loading...</p>
 				) : (
 					<>
-						<p className='description'>Digite a área desejada para a criação da trilha</p>
+						<p className='description'>Digite a área de atuação desejada para que a sua trilha seja criada</p>
 						<Input
 							label='Profissão'
 							required={false}
