@@ -17,6 +17,11 @@
 	&.primary {
 		background-color: $main-blue;
 		border: none;
+		width: 20vw;
+
+		@media screen and (max-width: 500px) {
+			width: 100%;
+		}
 
 		&:hover {
 			background-color: color.adjust($color: $main-blue, $saturation: 10%);
@@ -30,6 +35,11 @@
 	&.secondary {
 		background-color: $light-blue;
 		border: none;
+		width: 20vw;
+
+		@media screen and (max-width: 500px) {
+			width: 100%;
+		}
 
 		&:hover {
 			background-color: color.adjust($color: $light-blue, $saturation: 10%);
