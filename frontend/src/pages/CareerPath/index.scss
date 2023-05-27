@@ -1,44 +1,52 @@
 @import '../../sass/index.scss';
 .root {
 	height: 100%;
+	
 }
-.prompt-container {
+hr.solid {
+	border-top: 1px solid #000;
+}
+
+.career-path-container {
 	width: 100%;
-    max-width: 1200px;
 	display: flex;
-	flex-direction: column;
 	align-items: center;
+	flex-direction: column;
 	justify-content: center;
-	gap: 6vw;
-	padding: 0;
 
-	.header {
-		width: 100%;
-		padding: 1rem;
+	.content {
 		display: flex;
-		align-items: center;
-
-		.header-content {
-			max-width: 1250px;
-			display: flex;
-		}
-	}
-
-	.content{
-		width: 100%;
-   		max-width: 1200px;
-		display: flex;
-		align-items: center;
 		flex-direction: column;
-		justify-content: center;
-		margin-bottom: 4rem;
+		width: 100%;
+		padding: max(5vw, 2rem);
 
 		.title {
-			margin-bottom: 2rem;
-			color: #f36653;
+			color: $text;
 			text-align: center;
-			font-size: 56px;
+			font-size: max(3vw, 1.5rem);
 			font-weight: bold;
+			margin-bottom: 2rem;
+			
+			@media screen and (max-width: 500px) {
+				text-align: left;
+			}
 		}
+		
+		.list-item{
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 2vh 2vw;
+
+			.description {
+				color: $text;
+				font-size: 16px;
+			}
+
+			.image{
+				height: 2vh;
+			}
+		}
+
 	}
 }

@@ -23,7 +23,7 @@
 		font-size: 36px !important;
 		line-height: 48px;
 
-		color: #000000;
+		color: $text;
 	}
 	.content {
 		width: 100%;
@@ -39,7 +39,7 @@
             align-self: center;
         }
 
-		@media screen and (max-width: 400px) {
+		@media screen and (max-width: 500px) {
 			align-items: flex-start;
 		}
 
@@ -50,18 +50,7 @@
 			font-size: max(3vw, 1.5rem);
 			font-weight: bold;
 
-			@media screen and (max-width: 400px) {
-				text-align: left;
-			}
-		}
-
-		.description {
-			margin-bottom: 4vw;
-			font-size: max(1.5vw, 0.8rem);
-			color: $text;
-			text-align: center;
-
-			@media screen and (max-width: 400px) {
+			@media screen and (max-width: 500px) {
 				text-align: left;
 			}
 		}
@@ -77,8 +66,8 @@
 			max-width: 40vw;
 
 			margin-bottom: 10vh;
-			@media screen and (max-width: 400px) {
-				max-width: 100%;
+			@media screen and (max-width: 500px) {
+				max-width: 100% !important;
 
 			}
 		}

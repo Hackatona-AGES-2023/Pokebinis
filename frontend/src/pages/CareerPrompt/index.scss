@@ -14,17 +14,23 @@
 		display: flex;
 		align-items: center;
 		flex-direction: column;
-		justify-content: center;
+		justify-content: flex-start;
 		padding: max(5vw, 2rem);
 
-		.title {
-			margin-bottom: 2vw;
-			color: $text;
-			text-align: center;
-			font-size: max(3vw, 1.5rem);
-			font-weight: bold;
+		gap: 2vh;
 
+		.title {
+			margin-top: 5vh;
+
+			font-family: 'sora';
+			font-style: normal;
+			font-weight: 600;
+			font-size: 36px;
+			line-height: 48px;
+	
+			color: #000000;
 			@media screen and (max-width: 500px) {
+				align-self: flex-start;
 				text-align: left;
 			}
 		}
@@ -34,9 +40,12 @@
 			font-size: max(1.5vw, .8rem);
 			color: $text;
 			text-align: center;
+			font-size: 16px;
+			line-height: 24px;
 
 			@media screen and (max-width: 500px) {
 				text-align: left;
+				align-self: flex-start;
 			}
 		}
 
@@ -52,6 +61,13 @@
 
 		.confirm-button {
 			max-width: max(40vw, 20rem);
+			margin-top: 35vh;
+			Button{
+				font-size: 1.5rem;
+				@media screen and (min-width: 500px) {
+					min-width: 20rem;
+				}
+			}
 
 			@media screen and (max-width: 500px) {
 				min-width: 100%;
