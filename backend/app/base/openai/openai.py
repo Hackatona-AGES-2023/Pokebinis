@@ -18,8 +18,9 @@ class OpenAI:
 		response = openai.Completion.create(
 			model="text-davinci-003",
 			prompt=prompt,
-			temperature=0,
-			max_tokens=max_tokens
+			max_tokens=max_tokens,
+			top_p=0.05
+			# temperature=0,
 		)
 		return response
 

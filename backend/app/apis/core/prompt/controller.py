@@ -18,7 +18,7 @@ class PromptCarrerController(Resource):
 class PromptTopicsController(Resource):
 
 	@ns.expect(PromptDto.topics_list_schema)
-	# @ns.marshal_with(PromptDto.carrer_prompt_response_schema)
+	@ns.marshal_with(PromptDto.topics_contents_schema)
 	def post(self):
 		return PromptService.get_contents_from_topics(**ns.payload)
 
