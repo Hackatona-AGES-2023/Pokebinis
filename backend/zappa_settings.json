@@ -1,0 +1,23 @@
+{
+    "dev": {
+        "app_function": "main.app",
+        "profile_name": "zappa",
+        "project_name": "api-open-education",
+        "runtime": "python3.9",
+        "s3_bucket": "api-open-education",
+        "aws_region": "us-east-1",
+        "certificate_arn": "arn:aws:acm:us-east-1:745835199701:certificate/944a3c85-d240-4200-818c-28f95ea2324e",
+        "aws_environment_variables": {
+            "OPEN_AI_API_KEY": "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",
+            "DB_ENGINE": "postgresql+psycopg2",
+            "DB_HOST": "hanncho-postgresql.cnelmjeiy94a.us-east-1.rds.amazonaws.com",
+            "DB_USERNAME": "postgres",
+            "DB_PASSWORD": "DNY36#5U2zhanncho",
+            "DB_PORT": "5432",
+            "DB_NAME": "db-open-education"
+        },
+        "exclude": [
+            ".env"
+        ]
+    }
+}
