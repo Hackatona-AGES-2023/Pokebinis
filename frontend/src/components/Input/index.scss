@@ -34,7 +34,7 @@
 		border-radius: 12px;
 
 		&:focus {
-			border-color: $yellow;
+			border-color: $main-blue;
 		}
 
 		&:focus,
@@ -99,7 +99,7 @@
 			> .input,
 			> .input:focus,
 			> .label {
-				color: $grey;
+				color: $grey-blue;
 				border-color: transparent;
 				opacity: 1;
 				background: none;
