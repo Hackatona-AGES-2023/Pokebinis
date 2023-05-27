@@ -11,24 +11,21 @@ class PromptService:
 		return json.loads(res)
 
 	@staticmethod
-	def get_contents_from_topics(topics: list()):
-		response = list()
-		for topic in topics:
-			prompt = f"Escreva um texto que me faça aprender sobre {topic} para me desenvolver profissionalmente"
-			text = openai.prompt(prompt, max_tokens=400)
-			text = text.get("choices")[0].get('text').strip()
-			print(f'Text generated for topic {topic}')
-			prompt = f"Me sugira um video real da internet para aprender mais sobre o topico {topic} para meu desenvolvimento profissional. Responda somente a url do video"
-			media_url = openai.prompt(prompt, max_tokens=200)
-			media_url = media_url.get("choices")[0].get('text').strip()
-			response.append({
-				'name': topic,
-				'content': {
-					"media_url": media_url,
-					"text": text
-				}
-				})
-		return {
-			'data': response
-		}
+	def get_content_from_topic(topic: str):
+		prompt = f"Escreva um texto que me faça aprender sobre {topic} para me desenvolver profissionalmente"
+		text = openai.prompt(prompt, max_tokens=400)
+		text = text.get("choices")[0].get('text').strip()
+		print(f'Text generated for topic {topic}')
+		prompt = f"Me sugira um video real da internet para aprender mais sobre o topico {topic} para meu desenvolvimento profissional. Responda somente a url do video"
+		media_url = openai.prompt(prompt, max_tokens=200)
+		media_url = media_url.get("choices")[0].get('text').strip()
+		response = {
+			'name': topic,
+			'content': {
+				"media_url": media_url,
+				"text": text
+			}
+			}
+		return response
+		
 	

@@ -17,9 +17,9 @@ class PromptCarrerController(Resource):
 @ns.route('/topics')
 class PromptTopicsController(Resource):
 
-	@ns.expect(PromptDto.topics_list_schema)
-	@ns.marshal_with(PromptDto.topics_contents_schema)
+	@ns.expect(PromptDto.topic_list_schema)
+	@ns.marshal_with(PromptDto.topic_content_schema)
 	def post(self):
-		return PromptService.get_contents_from_topics(**ns.payload)
+		return PromptService.get_content_from_topic(**ns.payload)
 
 	
