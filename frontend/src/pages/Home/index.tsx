@@ -11,8 +11,8 @@ const Home: React.FC = () => {
 				<img src={IMAGES.logoWithTitle} />
 				<h1 className='title'>Entrar</h1>
 				<Input label='E-mail' required={false} className='input' />
-				<Button>Login</Button>
-				<Button>Cadastrar-se</Button>
+				<Button>Entrar</Button>
+				<Button type='secondary' >Cadastre-se</Button>
 			</div>
 		</div>
 	)
