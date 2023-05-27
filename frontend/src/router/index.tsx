@@ -2,10 +2,12 @@ import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { ProtectedRoute } from './ProtectedRoute'
 import { routes } from './routes'
+import Header from '../components/Header'
 
 const Router: React.FC = () => {
 	return (
 		<BrowserRouter>
+			<Header/>
 			<Routes>
 				{routes.map((route, index) => {
 					const element = route.requireAuth ? (

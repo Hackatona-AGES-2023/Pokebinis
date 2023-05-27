@@ -1,17 +1,17 @@
 import React from 'react'
 import IMAGES from '../../utils/constants/images'
+import PAGES from '../../utils/constants/pages'
+import { Link } from 'react-router-dom'
+import './index.scss'
 
 const Header: React.FC = () => {
 
     return(
         <header className="header">
             <div className="content">
-                <div className="left-side">
-                    <img src={IMAGES.logoWithTitle} />
-                </div>
-                <div className="right-side">
-
-                </div>
+                <Link to={PAGES.careerPrompt}>
+                    <img className="logo-svg" src={IMAGES.logoWithTitle} />
+                </Link>
             </div>
         </header>
     )

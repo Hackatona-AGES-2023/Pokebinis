@@ -1,0 +1,11 @@
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    
+    .logo-svg {
+        width: 50%;
+        margin-top: 1rem;
+        margin-left: 1rem;
+    }
+}
