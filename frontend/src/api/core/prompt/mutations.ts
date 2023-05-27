@@ -7,6 +7,6 @@ import { queryClient } from '../../query-client'
 
 export const useCarrerPromptMutation = (payload: CarrerPromptCreate) =>
 	useMutation({
-		mutationFn: () => promptApi.post('', payload).then((res) => res.data as TopicsResponse),
+		mutationFn: () => promptApi.post('/carrers', payload).then((res) => res.data as TopicsResponse),
 		onSuccess: () => queryClient.invalidateQueries({ queryKey: [QUERY_KEYS.prompt] })
 	})
