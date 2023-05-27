@@ -1,7 +1,10 @@
 import { RouteProps } from 'react-router-dom'
 import PAGES from '../utils/constants/pages'
 import Home from '../pages/Home'
-import Prompt from '../pages/Prompt'
+import CareerPath from '../pages/CareerPath'
+import TopicSelection from '../pages/TopicSelection'
+import TopicContent from '../pages/TopicContent'
+import CareerPrompt from '../pages/CareerPrompt'
 
 export interface RouteConfig extends Omit<RouteProps, 'component'> {
 	requireAuth?: boolean
@@ -17,8 +20,26 @@ export const routes: RouteConfig[] = [
 		footerEnabled: true
 	},
 	{
-		component: <Prompt />,
-		path: PAGES.prompt,
+		component: <CareerPrompt />,
+		path: PAGES.careerPrompt,
+		requireAuth: false,
+		footerEnabled: true
+	},
+	{
+		component: <TopicSelection />,
+		path: PAGES.topicSelection,
+		requireAuth: false,
+		footerEnabled: true
+	},
+	{
+		component: <CareerPath />,
+		path: PAGES.careerPath,
+		requireAuth: false,
+		footerEnabled: true
+	},
+	{
+		component: <TopicContent />,
+		path: PAGES.topicContent,
 		requireAuth: false,
 		footerEnabled: true
 	}

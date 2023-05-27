@@ -1,6 +1,9 @@
 const PAGES = {
 	home: '/',
-	prompt: '/user_prompt'
+	careerPrompt: '/career-prompt',
+	careerPath: '/career-path',
+	topicContent: '/topic-content',
+	topicSelection: '/topic-selection'
 }
 
 export default PAGES
